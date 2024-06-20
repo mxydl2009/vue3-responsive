@@ -1,0 +1,17 @@
+{
+  "name": "vue3-responsive-system-simulation",
+  "version": "1.0.0",
+  "description": "simulate vue3 responsive system for learning",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "responsive",
+    "system",
+    "vue3"
+  ],
+  "author": "mxydl2009@163.com",
+  "license": "MIT"
+}

@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "simulate vue3 responsive system for learning",
   "type": "module",
-  "main": "index.js",
+  "module": "index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docs": "jsdoc -c jsdocConfig.json",
+    "live": "live-server docs --watch docs",
+    "preview": "npm run docs && npm run live",
+    "watch": "nodemon --watch ./lib --exec \"npm run docs\" & npm run live"
   },
   "keywords": [
     "responsive",
@@ -13,5 +16,11 @@
     "vue3"
   ],
   "author": "mxydl2009@163.com",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jsdoc": "^4.0.3",
+    "live-server": "^1.2.2",
+    "nodemon": "^3.1.4",
+    "rimraf": "^5.0.7"
+  }
 }

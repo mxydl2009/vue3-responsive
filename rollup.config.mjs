@@ -2,7 +2,7 @@
 import terser from "@rollup/plugin-terser";
 
 export default {
-  input: "lib/index.mjs",
+  input: "lib/index.js",
   output: {
     file: "dist/responsive.mjs",
     format: "es",

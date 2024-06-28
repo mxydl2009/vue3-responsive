@@ -4,7 +4,7 @@
   },
   "source": {
     "include": ["lib"],
-    "includePattern": ".+\\.mjs$",
+    "includePattern": ".+\\.js$",
     "excludePattern": "(^|\\/|\\\\)_"
   },
   "opts": {

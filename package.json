@@ -1,15 +1,16 @@
 {
   "name": "@mxydl2009/vue3-responsive",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "simulate vue3 responsive system for learning",
-  "type": "module",
   "module": "dist/responsive.mjs",
+  "type": "module",
   "scripts": {
     "docs": "jsdoc -c jsdocConfig.json",
     "live": "live-server docs --watch docs",
     "preview": "npm run docs && npm run live",
     "watch": "nodemon --watch ./lib --exec \"npm run docs\" & npm run live",
-    "build": "rollup -c rollup.config.mjs"
+    "build": "rollup -c rollup.config.mjs",
+    "docs:md": "jsdoc2md lib/*.js > README.md"
   },
   "keywords": [
     "responsive",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "jsdoc": "^4.0.3",
+    "jsdoc-to-markdown": "^8.0.1",
     "live-server": "^1.2.2",
     "nodemon": "^3.1.4",
     "rimraf": "^5.0.7",

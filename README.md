@@ -138,12 +138,13 @@ computed API的具体实现
 ## reactive
 reactive 模块，提供reactive API，将原始对象转换为响应式对象
 
-<a name="exp_module_reactive--module.exports"></a>
+<a name="module_reactive.shallowReactive"></a>
 
-### module.exports(data) ⇒ <code>Proxy</code> ⏏
+### reactive.shallowReactive(data) ⇒ <code>Proxy</code>
+### 浅层响应
 根据原始数据生成代理对象，代理对象的读写操作会进行依赖收集和依赖触发
 
-**Kind**: Exported function  
+**Kind**: static method of [<code>reactive</code>](#module_reactive)  
 **Returns**: <code>Proxy</code> - 由原始数据生成的代理对象  
 
 | Param | Type | Description |
@@ -212,7 +213,7 @@ fooObj.value = 'bar'; // 打印bar
 
 ### 用法示例
 ```js
-const obj = reactive({ foo: 'foo', bar: 'bar' });
+const obj = shallowReactive({ foo: 'foo', bar: 'bar' });
 
 const refObj = toRefs(obj);
 
@@ -238,7 +239,7 @@ const copy = { ...refObj }; // copy.foo.value不会丢失响应
 
 ### 用法示例
 ```js
-const obj = reactive({ foo: 'foo', bar: 'bar' });
+const obj = shallowReactive({ foo: 'foo', bar: 'bar' });
 
 const refObj = toRefs(obj); // refObj的属性都是ref对象
 

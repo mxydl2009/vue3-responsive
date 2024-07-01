@@ -138,13 +138,33 @@ computed API的具体实现
 ## reactive
 reactive 模块，提供reactive API，将原始对象转换为响应式对象
 
-<a name="module_reactive.shallowReactive"></a>
 
-### reactive.shallowReactive(data) ⇒ <code>Proxy</code>
+* [reactive](#module_reactive)
+    * [module.exports(data)](#exp_module_reactive--module.exports) ⇒ <code>Proxy</code> ⏏
+        * [.shallowReactive(data)](#module_reactive--module.exports.shallowReactive) ⇒ <code>Proxy</code>
+
+<a name="exp_module_reactive--module.exports"></a>
+
+### module.exports(data) ⇒ <code>Proxy</code> ⏏
+### 深层响应
+根据原始数据生成代理对象，代理对象的读写操作会进行依赖收集和依赖触发, 原型上的属性以及symbol除外，
+因此, **不要使用symbol类型作为数据属性**
+
+**Kind**: Exported function  
+**Returns**: <code>Proxy</code> - 由原始数据生成的代理对象  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| data | <code>object</code> | 原始数据 |
+
+<a name="module_reactive--module.exports.shallowReactive"></a>
+
+#### module.exports.shallowReactive(data) ⇒ <code>Proxy</code>
 ### 浅层响应
-根据原始数据生成代理对象，代理对象的读写操作会进行依赖收集和依赖触发
+根据原始数据生成代理对象，代理对象的读写操作会进行依赖收集和依赖触发，原型上的属性以及symbol除外，
+因此, **不要使用symbol类型作为数据属性**
 
-**Kind**: static method of [<code>reactive</code>](#module_reactive)  
+**Kind**: static method of [<code>module.exports</code>](#exp_module_reactive--module.exports)  
 **Returns**: <code>Proxy</code> - 由原始数据生成的代理对象  
 
 | Param | Type | Description |
